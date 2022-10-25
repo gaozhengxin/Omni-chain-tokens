@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 import "../MessageProxy.sol";
 import "../IMessageReceiver.sol";
 
-contract PseudoMessageProxy is MessageProxy {
+contract MockMessageProxy is MessageProxy {
     event SendMessage(uint256 toChainID, address toContract, bytes message);
 
     constructor() {}

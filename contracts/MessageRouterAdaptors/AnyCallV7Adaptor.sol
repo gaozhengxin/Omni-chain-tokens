@@ -79,7 +79,7 @@ contract AnyCallV7Adaptor is MessageProxy {
         address toContract,
         bytes memory message
     ) internal override returns (bool succ) {
-        anyCallProxy.anyCall(toContract, message, toChainID, 0, "");
+        anyCallProxy.anyCall(toContract, message, toChainID, 2, "");
         return true;
     }
 

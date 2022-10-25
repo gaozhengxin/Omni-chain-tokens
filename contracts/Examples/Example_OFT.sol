@@ -18,6 +18,7 @@ contract Example_Omni_Chain_FT is FT_Gateway, ERC20 {
     }
 
     event Print(uint256 num, address receiver, uint256 amount);
+
     function _onReceiveToken(address receiver, uint256 amount)
         internal
         override

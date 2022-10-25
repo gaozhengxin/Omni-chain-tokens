@@ -4,10 +4,10 @@ describe("Test omni chain tokens", function () {
     it("Test omni chain FT", async function () {
         const [owner] = await ethers.getSigners();
 
-        // 1. deploy pseudo message proxy
-        console.log("\ndeploy pseudo message proxy");
-        let PseudoMessageProxy = await ethers.getContractFactory("PseudoMessageProxy");
-        let messageProxy = await PseudoMessageProxy.deploy();
+        // 1. deploy mock message proxy
+        console.log("\ndeploy mock message proxy");
+        let MockMessageProxy = await ethers.getContractFactory("MockMessageProxy");
+        let messageProxy = await MockMessageProxy.deploy();
         console.log("messageProxy " + messageProxy.address);
 
         // 2. deploy oft
@@ -53,10 +53,10 @@ describe("Test omni chain tokens", function () {
     it("Test omni chain NFT", async function () {
         const [owner] = await ethers.getSigners();
 
-        // 1. deploy pseudo message proxy
-        console.log("\ndeploy pseudo message proxy");
-        let PseudoMessageProxy = await ethers.getContractFactory("PseudoMessageProxy");
-        let messageProxy = await PseudoMessageProxy.deploy();
+        // 1. deploy mock message proxy
+        console.log("\ndeploy mock message proxy");
+        let MockMessageProxy = await ethers.getContractFactory("MockMessageProxy");
+        let messageProxy = await MockMessageProxy.deploy();
         console.log("messageProxy " + messageProxy.address);
 
         // 2. deploy onft
