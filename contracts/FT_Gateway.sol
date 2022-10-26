@@ -45,6 +45,8 @@ abstract contract FT_Gateway is IMessageReceiver {
         return succ;
     }
 
+    /// @dev Phase 1 of a xchain transfer
+    /// burn or lock up the token
     function _onSendingToken(address tokenSender, uint256 amount)
         internal
         virtual
@@ -67,6 +69,8 @@ abstract contract FT_Gateway is IMessageReceiver {
         }
     }
 
+    /// @dev Phase 2 of a xchain transfer
+    /// mint or unlock the token
     function _onReceiveToken(address receiver, uint256 amount)
         internal
         virtual

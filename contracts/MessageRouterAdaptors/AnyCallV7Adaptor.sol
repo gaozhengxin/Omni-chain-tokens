@@ -42,8 +42,8 @@ contract AnyCallV7Adaptor is MessageProxy {
         provider = anyCallProxy.executor();
     }
 
-    function setReceiver(address receiver_) external {
-        receiver = IMessageReceiver(receiver_);
+    function setReceiver(address messageReceiver_) external {
+        messageReceiver = IMessageReceiver(messageReceiver_);
     }
 
     function setMessageSender(address messageSender_) external {

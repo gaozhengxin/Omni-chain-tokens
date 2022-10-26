@@ -6,7 +6,7 @@ import "./IMessageReceiver.sol";
 
 abstract contract MessageReceiverProxy {
     address public provider;
-    IMessageReceiver public receiver;
+    IMessageReceiver public messageReceiver;
 
     function isTrustedSender(uint256 chainID, address sender)
         public
@@ -27,6 +27,6 @@ abstract contract MessageReceiverProxy {
             isTrustedSender(fromChainID, sender),
             "MessageReceiver: message sender is not trusted"
         );
-        receiver.onReceiveMessage(fromChainID, sender, data);
+        messageReceiver.onReceiveMessage(fromChainID, sender, data);
     }
 }
